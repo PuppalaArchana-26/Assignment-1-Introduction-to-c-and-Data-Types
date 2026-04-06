@@ -120,6 +120,7 @@ fs.Close(); // manually release the resource
 ## Question 4 Whats the purpose of Garbage Collector in .NET?
 
 **#ANSWER**
+
 In .NET, the Garbage Collector (GC) is responsible for automatic memory management. Its main job is to clean up memory that is no longer being used by your program, so you don’t have to manually free it. This helps prevent memory leaks and improves the performance and reliability of your application.
 
   
