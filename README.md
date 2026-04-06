@@ -50,3 +50,4 @@ In a database, choosing the correct data type is important to store data properl
 - **Number of Employees (up to 50,000)** → INT  
   Example: 1250  
   This value is within the range of integer numbers.
+  
