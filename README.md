@@ -227,7 +227,7 @@ Example:
 
 int age = 21;  // 'int' is a keyword
 
-** Main() and Command-Line Arguments**
+**Main() and Command-Line Arguments**
 
 Definition: Main() is the entry point of a C# program; it can take command-line arguments as input.
 Example:
@@ -237,7 +237,7 @@ static void Main(string[] args)
     Console.WriteLine(args[0]); // prints first argument
 }
 
-** Types (C# Programming Guide)**
+**Types (C# Programming Guide)**
 
 Definition: Data types define the type of data a variable can store.
 
@@ -265,7 +265,7 @@ Example:
 string name = "Archana";
 Console.WriteLine("Hello " + name);
 
-** Nullable Types (C# Programming Guide)**
+**Nullable Types (C# Programming Guide)**
 
 Definition: Value types that can store null using ?.
 Example:
@@ -281,3 +281,48 @@ Example:
 
 string? name = null;  // nullable reference type
 string city = "Cleveland"; // non-nullable
+
+
+**Dividing an int by 0**
+
+Throws a DivideByZeroException at runtime.
+
+**Dividing a double by 0**
+
+Results in Infinity or -Infinity; no exception is thrown.
+
+ **Overflowing an int variable**
+
+The value wraps around silently unless checked, in which case an OverflowException occurs.
+
+**x = y++; vs x = ++y;**
+
+y++ is post-increment (use value first, then increment)
+++y is pre-increment (increment first, then use value)
+
+**break, continue, and return in loops**
+
+break → exits the entire loop
+continue → skips current iteration and moves to next
+return → exits the method entirely
+
+**Three parts of a for statement**
+
+Initialization, Condition, Iteration; condition is required, others are optional.
+ 
+ **= vs == operators**
+ 
+= → assignment
+== → equality comparison
+
+**for ( ; true; ) ; statement**
+
+Compiles; represents an infinite loop.
+
+**Underscore _ in a switch expression**
+
+Represents the default case (matches anything not explicitly handled).
+
+**Interface required for foreach**
+
+The object must implement IEnumerable or IEnumerable<T>.
