@@ -47,13 +47,17 @@ int a = 10;
 int b = a; // b is a copy of a
 b = 20;  // a is still 10
 **Reference type:**
+
 int[] arr1 = {1, 2, 3};
 int[] arr2 = arr1; // arr2 points to the same array as arr1
 arr2[0] = 10;     // arr1[0] is now 10 too
+
 Boxing and Unboxing are ways to convert between value types and reference types.
 **Boxing** happens when a value type is wrapped into an object so it can be treated as a reference type.
 **Unboxing** happens when the value is taken back out of the object to its original type.
+
 **Example:**
+
 int num = 123;      // value type
 object obj = num;   // boxing: value type -> reference type
 int n = (int)obj;   // unboxing: reference type -> value type
