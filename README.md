@@ -124,9 +124,8 @@ fs.Close(); // manually release the resource
 In .NET, the Garbage Collector (GC) is responsible for automatic memory management. Its main job is to clean up memory that is no longer being used by your program, so you don’t have to manually free it. This helps prevent memory leaks and improves the performance and reliability of your application.
 
 
-Playing with Console App
-
-Practice number sizes and ranges
+**Playing with Console App**
+**Practice number sizes and ranges**
 
 ## Question 1 .
 
