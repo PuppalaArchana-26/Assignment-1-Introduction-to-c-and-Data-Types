@@ -38,14 +38,20 @@ In a database, choosing the correct data type is important to store data properl
   This value is within the range of integer numbers.
 ## Question 2. What are the difference between value type and reference type variables? What is boxing and unboxing?
 **#ANSWER**
+
 In programming, variables can be either value types or reference types, and it’s important to know the difference.
+
 **Value types** store the actual data. For example, if you have an integer or a float, the variable holds the number itself. Copying a value type creates a completely independent copy.
+
 **Reference types** on the other hand, store a reference (like a pointer) to where the actual data is stored in memory. Objects, arrays, and strings are reference types. When you copy a reference type variable, both copies point to the same object, so changes in one affect the other.
+
 **Example:**
+
 **Value type:**
 int a = 10;
 int b = a; // b is a copy of a
 b = 20;  // a is still 10
+
 **Reference type:**
 
 int[] arr1 = {1, 2, 3};
@@ -53,7 +59,9 @@ int[] arr2 = arr1; // arr2 points to the same array as arr1
 arr2[0] = 10;     // arr1[0] is now 10 too
 
 Boxing and Unboxing are ways to convert between value types and reference types.
+
 **Boxing** happens when a value type is wrapped into an object so it can be treated as a reference type.
+
 **Unboxing** happens when the value is taken back out of the object to its original type.
 
 **Example:**
