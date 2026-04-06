@@ -575,3 +575,77 @@ if statements check which time range the current hour falls into:
 21–4 → Night
 Only if is used, no else.
 
+**Write a program that prints the result of counting up to 24 using four different increments.
+First, count by 1s, then by 2s, by 3s, and finally by 4s.
+Use nested for loops with your outer loop counting from 1 to 4. You inner loop should
+count from 0 to 24, but increase the value of its /loop control variable/ by the value of the /
+loop control variable/ from the outer loop. This means the incrementing in the /
+afterthought/ expression will be based on a variable.
+Your output should look something like this:**
+
+using System;
+
+class CountingByIncrements
+{
+    static void Main()
+    {
+        // Outer loop determines the increment (1,2,3,4)
+        for (int outer = 1; outer <= 4; outer++)
+        {
+            // Inner loop counts from 0 to 24 by 'outer'
+            for (int inner = 0; inner <= 24; inner += outer)
+            {
+                Console.Write(inner);
+
+                if (inner + outer <= 24) // comma except after last number
+                    Console.Write(",");
+            }
+
+            Console.WriteLine(); // move to next line for next increment
+        }
+    }
+}
+
+
+How it works:
+Outer loop (outer) → determines the increment (1, 2, 3, 4).
+Inner loop (inner) → counts from 0 to 24, incrementing by outer each time.
+Console.Write(inner) prints the number, and commas are added except after the last number.
+Console.WriteLine() moves to the next line for the next increment series.
+
+**C# Operators**
+Symbols that perform operations on variables or values, such as arithmetic, comparison, or logical operations.
+
+ **Bitwise and Shift Operators**
+
+Operators that work on the binary representation of numbers, including bitwise (&, |, ^, ~) and shift operators (<<, >>).
+
+**Statement Keywords**
+
+Keywords that control the flow of execution in a program, like return, break, and continue.
+
+**Casting and Type Conversions**
+
+Changing a variable from one data type to another, either implicitly (automatic) or explicitly (manual casting).
+
+**Fundamentals of Garbage Collection**
+
+Automatic memory management in .NET that frees memory of objects no longer in use.
+
+**$ - String Interpolation**
+
+A way to embed variables directly into strings using $ for cleaner, readable code.
+
+**Formatting Types in .NET**
+
+Customizing how values (numbers, dates, etc.) are displayed as strings.
+
+**Iteration Statements**
+
+Statements that repeat code multiple times, such as for, while, do-while, and foreach.
+
+**Selection Statements**
+
+Statements that choose a path based on a condition, such as if, if-else, or switch.
+
+
