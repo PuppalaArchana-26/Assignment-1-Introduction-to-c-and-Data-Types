@@ -190,32 +190,23 @@ microseconds = 15778454400000000000 nanoseconds
 
 using System;
 
-class CenturiesConverter
+class Program
 {
     static void Main()
     {
         Console.Write("Enter number of centuries: ");
-        int centuries = int.Parse(Console.ReadLine());
+        long centuries = long.Parse(Console.ReadLine());
 
-        // Years
-        int years = centuries * 100;
+        // Step-by-step calculation using integers
+        long years = centuries * 100;
+        long days = years * 36524 / 100;      // 365.24 days per year
+        long hours = days * 24;
+        long minutes = hours * 60;
+        long seconds = minutes * 60;
+        decimal milliseconds = (decimal)seconds * 1000;
+        decimal microseconds = milliseconds * 1000;
+        decimal nanoseconds = microseconds * 1000;
 
-        // Days (accounting for leap years: approx 365.24 days per year)
-        double days = years * 365.2425;
-
-        // Hours, Minutes, Seconds
-        double hours = days * 24;
-        double minutes = hours * 60;
-        double seconds = minutes * 60;
-
-        // Milliseconds, Microseconds, Nanoseconds
-        double milliseconds = seconds * 1000;
-        double microseconds = milliseconds * 1000;
-        double nanoseconds = microseconds * 1000;
-
-        // Display result
-        Console.WriteLine($"{centuries} centuries = {years} years = {days:N0} days = {hours:N0} hours = {minutes:N0} minutes = {seconds:N0} seconds = {milliseconds:N0} milliseconds = {microseconds:N0} microseconds = {nanoseconds:N0} nanoseconds");
+        Console.WriteLine($"{centuries} centuries = {years} years = {days} days = {hours} hours = {minutes} minutes = {seconds} seconds = {milliseconds:N0} milliseconds = {microseconds:N0} microseconds = {nanoseconds:N0} nanoseconds");
     }
 }
-
-  
