@@ -529,4 +529,49 @@ daysToNextAnniversary = 10000 - (daysOld % 10000) → days until next 10,000-day
 nextAnniversary = today.AddDays(daysToNextAnniversary) → date of next anniversary.
 
 
+**QUESTION 5**
+
+using System;
+
+class TimeBasedGreeting
+{
+    static void Main()
+    {
+        // You can test with a specific time
+        // DateTime currentTime = new DateTime(2026, 4, 6, 14, 30, 0); // 2:30 PM
+        // Or use the current system time
+        DateTime currentTime = DateTime.Now;
+
+        int hour = currentTime.Hour; // 0-23
+
+        if (hour >= 5 && hour < 12)
+        {
+            Console.WriteLine("Good Morning");
+        }
+
+        if (hour >= 12 && hour < 17)
+        {
+            Console.WriteLine("Good Afternoon");
+        }
+
+        if (hour >= 17 && hour < 21)
+        {
+            Console.WriteLine("Good Evening");
+        }
+
+        if ((hour >= 21 && hour <= 23) || (hour >= 0 && hour < 5))
+        {
+            Console.WriteLine("Good Night");
+        }
+    }
+}
+
+How it works:
+currentTime.Hour gives the hour in 24-hour format (0–23).
+if statements check which time range the current hour falls into:
+5–11 → Morning
+12–16 → Afternoon
+17–20 → Evening
+21–4 → Night
+Only if is used, no else.
 
