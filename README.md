@@ -210,3 +210,74 @@ class Program
         Console.WriteLine($"{centuries} centuries = {years} years = {days} days = {hours} hours = {minutes} minutes = {seconds} seconds = {milliseconds:N0} milliseconds = {microseconds:N0} microseconds = {nanoseconds:N0} nanoseconds");
     }
 }
+Explore following topics
+C# Keywords
+Main() and command-line arguments
+Types (C# Programming Guide)
+Statements, Expressions, and Operators
+Strings (C# Programming Guide)
+Nullable Types (C# Programming Guide)
+Nullable reference types
+
+
+**C# Keywords**
+
+Definition: Reserved words in C# with special meaning; cannot be used as variable names.
+Example:
+
+int age = 21;  // 'int' is a keyword
+
+** Main() and Command-Line Arguments**
+
+Definition: Main() is the entry point of a C# program; it can take command-line arguments as input.
+Example:
+
+static void Main(string[] args)
+{
+    Console.WriteLine(args[0]); // prints first argument
+}
+
+** Types (C# Programming Guide)**
+
+Definition: Data types define the type of data a variable can store.
+
+Value types: store data directly (int, double)
+Reference types: store reference to data (string, object)
+Example:
+int a = 10;       // value type
+string name = "Archana"; // reference type
+
+**Statements, Expressions, and Operators**
+
+Definition:
+
+Statement: A complete instruction (int a = 5;)
+Expression: Produces a value (5 + 3)
+Operator: Symbol to perform operations (+, -, *)
+Example:
+int sum = 5 + 3;  // expression with operator inside statement
+
+**Strings (C# Programming Guide)**
+
+Definition: A sequence of characters used to store text.
+Example:
+
+string name = "Archana";
+Console.WriteLine("Hello " + name);
+
+** Nullable Types (C# Programming Guide)**
+
+Definition: Value types that can store null using ?.
+Example:
+
+int? age = null;
+age = 25;
+Console.WriteLine(age);  // 25
+
+**Nullable Reference Types**
+
+Definition: Reference types that explicitly allow null (introduced in C# 8.0) to prevent null reference exceptions.
+Example:
+
+string? name = null;  // nullable reference type
+string city = "Cleveland"; // non-nullable
