@@ -156,6 +156,7 @@ class Program
         Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "decimal", sizeof(decimal), decimal.MinValue, decimal.MaxValue);
     }
 }
+
 **EXPLANATION **
 
 sizeof(type) → Returns the number of bytes used by the type.
@@ -169,5 +170,52 @@ Composite formatting ({0,-15} {1,-8} {2,-25} {3}) →
 -15 → left-align in 15-character width
 
 Makes columns neatly aligned for readability
+
+
+## Question 2
+
+Write program to enter an integer number of centuries and convert it to years, days, hours,
+minutes, seconds, milliseconds, microseconds, nanoseconds. Use an appropriate data
+type for every data conversion. Beware of overflows!
+Input: 1
+Output: 1 centuries = 100 years = 36524 days = 876576 hours = 52594560 minutes
+= 3155673600 seconds = 3155673600000 milliseconds = 3155673600000000
+microseconds = 3155673600000000000 nanoseconds
+Input: 5
+Output: 5 centuries = 500 years = 182621 days = 4382904 hours = 262974240
+minutes = 15778454400 seconds = 15778454400000 milliseconds = 15778454400000000
+microseconds = 15778454400000000000 nanoseconds
+
+**ANSWER**
+
+using System;
+
+class CenturiesConverter
+{
+    static void Main()
+    {
+        Console.Write("Enter number of centuries: ");
+        int centuries = int.Parse(Console.ReadLine());
+
+        // Years
+        int years = centuries * 100;
+
+        // Days (accounting for leap years: approx 365.24 days per year)
+        double days = years * 365.2425;
+
+        // Hours, Minutes, Seconds
+        double hours = days * 24;
+        double minutes = hours * 60;
+        double seconds = minutes * 60;
+
+        // Milliseconds, Microseconds, Nanoseconds
+        double milliseconds = seconds * 1000;
+        double microseconds = milliseconds * 1000;
+        double nanoseconds = microseconds * 1000;
+
+        // Display result
+        Console.WriteLine($"{centuries} centuries = {years} years = {days:N0} days = {hours:N0} hours = {minutes:N0} minutes = {seconds:N0} seconds = {milliseconds:N0} milliseconds = {microseconds:N0} microseconds = {nanoseconds:N0} nanoseconds");
+    }
+}
 
   
