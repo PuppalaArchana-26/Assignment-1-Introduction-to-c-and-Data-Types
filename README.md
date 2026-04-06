@@ -49,13 +49,17 @@ In programming, variables can be either value types or reference types, and itâ€
 
 **Value type:**
 int a = 10;
+
 int b = a; // b is a copy of a
+
 b = 20;  // a is still 10
 
 **Reference type:**
 
 int[] arr1 = {1, 2, 3};
+
 int[] arr2 = arr1; // arr2 points to the same array as arr1
+
 arr2[0] = 10;     // arr1[0] is now 10 too
 
 Boxing and Unboxing are ways to convert between value types and reference types.
