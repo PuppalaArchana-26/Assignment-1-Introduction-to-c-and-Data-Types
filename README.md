@@ -75,4 +75,45 @@ int num = 123;      // value type
 object obj = num;   // boxing: value type -> reference type
 
 int n = (int)obj;   // unboxing: reference type -> value type
+
+## Question 3 What is meant by the terms managed resource and unmanaged resource in .NET?
+
+**#ANSWER**
+
+**Managed Resource**
+
+**Definition:** Managed resources are handled automatically by the .NET runtime (CLR).
+The Garbage Collector (GC) automatically allocates and frees memory for these objects.
+You don’t need to manually clean them up.
+
+**Examples:**
+
+Objects created using new in C# (like String, List, StreamReader)
+Arrays, classes, and other .NET objects
+
+**Example:**
+
+List<int> numbers = new List<int>(); // managed resource
+
+numbers.Add(1);
+
+numbers = null; // GC will clean it up automatically
+
+**Unmanaged Resource**
+
+**Definition:** Unmanaged resources are not handled by the .NET runtime.
+You need to manually release or clean them when you’re done, otherwise they can cause memory leaks.
+
+**Examples:**
+
+File handles
+Database connections
+Network sockets
+Windows handles, GDI objects, or external libraries
+
+**Example:**
+
+FileStream fs = new FileStream("file.txt", FileMode.Open); // unmanaged resource
+
+fs.Close(); // manually release the resource
   
