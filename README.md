@@ -326,3 +326,66 @@ Represents the default case (matches anything not explicitly handled).
 **Interface required for foreach**
 
 The object must implement IEnumerable or IEnumerable<T>.
+
+**FizzBuzz (Count to 100)**
+
+using System;
+
+class Exercise03
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % 3 == 0 && i % 5 == 0)
+                Console.WriteLine("fizzbuzz");
+            else if (i % 3 == 0)
+                Console.WriteLine("fizz");
+            else if (i % 5 == 0)
+                Console.WriteLine("buzz");
+            else
+                Console.WriteLine(i);
+        }
+    }
+}
+
+**Byte Overflow Example**
+
+using System;
+
+class ByteOverflow
+{
+    static void Main()
+    {
+        int max = 500;
+        for (byte i = 0; i < max; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+} 
+
+**Random Number Guessing Game (1–3)**
+
+using System;
+
+class RandomGuess
+{
+    static void Main()
+    {
+        int correctNumber = new Random().Next(3) + 1; // 1 to 3
+
+        Console.Write("Guess a number between 1 and 3: ");
+        int guessedNumber = int.Parse(Console.ReadLine());
+
+        if (guessedNumber < 1 || guessedNumber > 3)
+            Console.WriteLine("Invalid guess! Number must be 1, 2, or 3.");
+        else if (guessedNumber < correctNumber)
+            Console.WriteLine("Too low!");
+        else if (guessedNumber > correctNumber)
+            Console.WriteLine("Too high!");
+        else
+            Console.WriteLine("Correct! Well done!");
+    }
+}
+
