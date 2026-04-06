@@ -389,3 +389,109 @@ class RandomGuess
     }
 }
 
+using System;
+
+class StarPyramid
+{
+    static void Main()
+    {
+        int totalLines = 5; // Number of lines in the pyramid
+
+        for (int i = 1; i <= totalLines; i++)
+        {
+            // First inner loop: print spaces
+            for (int j = i; j < totalLines; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Second inner loop: print stars
+            for (int k = 1; k <= (2 * i - 1); k++)
+            {
+                Console.Write("*");
+            }
+
+            // Move to the next line
+            Console.WriteLine();
+        }
+    }
+}
+
+**2. PRINT A PYRAMID**
+
+using System;
+
+class StarPyramid
+{
+    static void Main()
+    {
+        int totalLines = 5; // Number of lines in the pyramid
+
+        for (int i = 1; i <= totalLines; i++)
+        {
+            // First inner loop: print spaces
+            for (int j = i; j < totalLines; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Second inner loop: print stars
+            for (int k = 1; k <= (2 * i - 1); k++)
+            {
+                Console.Write("*");
+            }
+
+            // Move to the next line
+            Console.WriteLine();
+        }
+    }
+}
+
+
+
+Write a program that generates a random number between 1 and 3 and asks the user to
+guess what the number is. Tell the user if they guess low, high, or get the correct answer.
+Also, tell the user if their answer is outside of the range of numbers that are valid guesses
+(less than 1 or more than 3). You can convert the user's typed answer from a string to an
+int using this code
+
+
+
+using System;
+
+class RandomGuessGame
+{
+    static void Main()
+    {
+        // Generate a random number between 1 and 3
+        int correctNumber = new Random().Next(3) + 1;
+
+        // Ask the user to guess
+        Console.Write("Guess a number between 1 and 3: ");
+        int guessedNumber = int.Parse(Console.ReadLine()); // assume valid integer input
+
+        // Check the guess
+        if (guessedNumber < 1 || guessedNumber > 3)
+        {
+            Console.WriteLine("Invalid guess! Number must be 1, 2, or 3.");
+        }
+        else if (guessedNumber < correctNumber)
+        {
+            Console.WriteLine("Too low!");
+        }
+        else if (guessedNumber > correctNumber)
+        {
+            Console.WriteLine("Too high!");
+        }
+        else
+        {
+            Console.WriteLine("Correct! Well done!");
+        }
+    }
+}
+
+
+
+
+
+
