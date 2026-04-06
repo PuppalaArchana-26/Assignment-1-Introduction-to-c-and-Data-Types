@@ -123,4 +123,39 @@ fs.Close(); // manually release the resource
 
 In .NET, the Garbage Collector (GC) is responsible for automatic memory management. Its main job is to clean up memory that is no longer being used by your program, so you don’t have to manually free it. This helps prevent memory leaks and improves the performance and reliability of your application.
 
+
+Playing with Console App
+
+Practice number sizes and ranges
+
+## Question 1 .
+
+Create a console application project named /02UnderstandingTypes/ that outputs the
+number of bytes in memory that each of the following number types uses, and the
+minimum and maximum values they can have: sbyte, byte, short, ushort, int, uint, long,
+ulong, float, double, and decimal.
+Composite Formatting to learn how to align text in a console application
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Number Type     Bytes     Min Value                 Max Value");
+        Console.WriteLine("---------------------------------------------------------------");
+
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "sbyte", sizeof(sbyte), sbyte.MinValue, sbyte.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "byte", sizeof(byte), byte.MinValue, byte.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "short", sizeof(short), short.MinValue, short.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "ushort", sizeof(ushort), ushort.MinValue, ushort.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "int", sizeof(int), int.MinValue, int.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "uint", sizeof(uint), uint.MinValue, uint.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "long", sizeof(long), long.MinValue, long.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "ulong", sizeof(ulong), ulong.MinValue, ulong.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "float", sizeof(float), float.MinValue, float.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "double", sizeof(double), double.MinValue, double.MaxValue);
+        Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "decimal", sizeof(decimal), decimal.MinValue, decimal.MaxValue);
+    }
+}
+
   
