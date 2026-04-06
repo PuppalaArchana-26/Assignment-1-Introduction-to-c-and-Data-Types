@@ -156,5 +156,18 @@ class Program
         Console.WriteLine("{0,-15} {1,-8} {2,-25} {3}", "decimal", sizeof(decimal), decimal.MinValue, decimal.MaxValue);
     }
 }
+**EXPLANATION **
+
+sizeof(type) → Returns the number of bytes used by the type.
+
+type.MinValue and type.MaxValue → Shows the range of that numeric type.
+
+Composite formatting ({0,-15} {1,-8} {2,-25} {3}) →
+
+0 → first argument (Number Type)
+
+-15 → left-align in 15-character width
+
+Makes columns neatly aligned for readability
 
   
