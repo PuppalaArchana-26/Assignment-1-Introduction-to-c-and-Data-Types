@@ -449,11 +449,11 @@ class StarPyramid
 
 
 
-Write a program that generates a random number between 1 and 3 and asks the user to
+**Write a program that generates a random number between 1 and 3 and asks the user to
 guess what the number is. Tell the user if they guess low, high, or get the correct answer.
 Also, tell the user if their answer is outside of the range of numbers that are valid guesses
 (less than 1 or more than 3). You can convert the user's typed answer from a string to an
-int using this code
+int using this code**
 
 
 
@@ -490,8 +490,43 @@ class RandomGuessGame
     }
 }
 
+**Write a simple program that defines a variable representing a birth date and calculates
+how many days old the person with that birth date is currently.
+For extra credit, output the date of their next 10,000 day (about 27 years) anniversary.
+Note: once you figure out their age in days, you can calculate the days until the next
+anniversary using int daysToNextAnniversary = 10000 - (days % 10000);**
 
+using System;
 
+class AgeInDays
+{
+    static void Main()
+    {
+        // Define birth date (change to actual birth date)
+        DateTime birthDate = new DateTime(1995, 5, 15);
+
+        // Calculate age in days
+        DateTime today = DateTime.Today;
+        TimeSpan ageSpan = today - birthDate;
+        int daysOld = ageSpan.Days;
+
+        Console.WriteLine("You are " + daysOld + " days old.");
+
+        // Calculate days until next 10,000-day anniversary
+        int daysToNextAnniversary = 10000 - (daysOld % 10000);
+        DateTime nextAnniversary = today.AddDays(daysToNextAnniversary);
+
+        Console.WriteLine("Your next 10,000-day anniversary is in " + 
+                           daysToNextAnniversary + " days, on " + 
+                           nextAnniversary.ToString("MMMM dd, yyyy") + ".");
+    }
+}
+How it works:
+birthDate → set the person’s birth date.
+ageSpan = today - birthDate → difference in TimeSpan.
+daysOld = ageSpan.Days → total days.
+daysToNextAnniversary = 10000 - (daysOld % 10000) → days until next 10,000-day milestone.
+nextAnniversary = today.AddDays(daysToNextAnniversary) → date of next anniversary.
 
 
 
